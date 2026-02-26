@@ -634,3 +634,45 @@ h1, h2, h3, h4 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-primary);
 }
+/* Ensure the card stacks elements vertically */
+.project-card {
+    display: flex;
+    flex-direction: column; /* This puts image on top, text on bottom */
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Force the image container to the top */
+.project-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    order: 1;      /* Ensures it stays first */
+}
+
+.project-img-src {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the aspect ratio professional */
+}
+
+/* Force the content to the bottom */
+.project-content {
+    padding: 20px;
+    order: 2;      /* Ensures it stays second */
+}
+/* This forces the image container to be taller */
+.project-image {
+    height: 450px !important; /* Increase this number to make the box even longer */
+    width: 100% !important;
+    overflow: hidden !important; /* This prevents the image from 'going out' of the box */
+    display: block !important;
+}
+
+/* This forces the image to fill that new long box perfectly */
+.project-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* This crops the image so it doesn't stretch */
+    display: block !important;
+}
