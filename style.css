@@ -816,3 +816,99 @@ h1, h2, h3, h4 {
     box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
     filter: brightness(1.1);
 }
+/* This styles the container to keep buttons in one line */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* This styles the Resume button specifically */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid #00d2ff; /* This matches your blue theme */
+    color: #00d2ff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: rgba(0, 210, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    transform: translateY(-3px);
+}
+/* Fix button alignment in the Hero section */
+.hero-btns {
+    display: flex;
+    flex-direction: row; /* Forces horizontal line */
+    gap: 15px;           /* Proper spacing between buttons */
+    margin-top: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Ensure the Resume button matches your existing "Contact Me" style */
+.hero-btns .btn {
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap; /* Keeps button text on one line */
+    transition: all 0.3s ease;
+}
+
+/* This creates the sleek border look for the Resume and Contact buttons */
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #00d2ff;
+    color: #00d2ff;
+}
+
+.secondary-btn:hover {
+    background: rgba(0, 210, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    transform: translateY(-2px);
+}
+/* This part ensures the buttons are in one neat row */
+.hero-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: nowrap; /* Forces them to stay on one line */
+}
+
+/* Base style for all buttons in the hero section */
+.hero-btns .btn {
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    
+    /* The secondary-btn style: Border with no background */
+    background: transparent;
+    border: 2px solid #00d2ff;
+    color: #00d2ff;
+}
+
+/* The hover effect for all three buttons */
+.hero-btns .btn:hover {
+    background: rgba(0, 210, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    transform: translateY(-3px);
+}
