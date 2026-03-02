@@ -376,15 +376,12 @@ h1, h2, h3, h4 {
     gap: 2rem;
 }
 
-.project-card {
-    background: var(--glass-bg);
-    border-radius: 18px;
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(14px);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+.skills-container {
+    background: rgba(255, 255, 255, 0.05); /* Very transparent white */
+    backdrop-filter: blur(10px); /* This creates the frost glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
 }
 
 .project-card:hover {
@@ -740,4 +737,82 @@ h1, h2, h3, h4 {
 
 .funding-badge i {
     font-size: 1rem;
+}
+.skills-card {
+    background: #111;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.skills-card:hover {
+    transform: translateY(-10px);
+    border-color: #00d2ff;
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+}
+.skill-progress {
+    width: 0; /* Start at 0 */
+    height: 100%;
+    background: linear-gradient(90deg, #00d2ff, #928dab);
+    border-radius: 10px;
+    animation: loadBars 2s forwards; /* Add animation */
+}
+
+@keyframes loadBars {
+    from { width: 0; }
+    to { width: var(--target-width); } /* Requires setting a variable in HTML */
+}
+/* Styling the new tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-tags span {
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid #00d2ff;
+    color: #00d2ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.skill-tags span:hover {
+    background: #00d2ff;
+    color: #000;
+    box-shadow: 0 0 15px #00d2ff;
+}
+
+/* Adding the Glow Effect to your current cards */
+.skills-card:hover {
+    border-color: #00d2ff !important;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+    transform: translateY(-5px);
+}
+.resume-download {
+    margin-top: 25px;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #00d2ff 0%, #928dab 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
+    filter: brightness(1.1);
 }
