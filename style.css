@@ -962,3 +962,178 @@ h1, h2, h3, h4 {
     font-weight: bold;
     font-size: 0.85rem;
 }
+/* Certificate Section Layout */
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.cert-subtitle {
+    max-width: 400px;
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styling */
+.cert-card {
+    background: #161b22; /* Deep dark blue-grey */
+    border: 1px solid #30363d;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    border-color: #00d2ff;
+    transform: translateY(-5px);
+    background: #1c2128;
+}
+
+.cert-category {
+    color: #888;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cert-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.cert-year {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive fix for the header */
+@media (max-width: 768px) {
+    .cert-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cert-subtitle {
+        text-align: left;
+    }
+}
+/* Center the Heading */
+.cert-header {
+    text-align: center; /* Centers the title */
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+/* Center the Cards Grid */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-content: center; /* Centers cards if there are only 1 or 2 */
+    max-width: 1200px;      /* Prevents the cards from getting too wide */
+    margin: 0 auto;         /* Centers the entire grid container */
+}
+
+/* Ensure card text is also centered (Optional, based on your preference) */
+.cert-card {
+    text-align: center;
+    align-items: center; /* Centers items vertically in flex column */
+}
+/* Styling for the View Certificate button */
+.view-cert-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #00d2ff;
+    color: #00d2ff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.view-cert-btn:hover {
+    background: #00d2ff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Ensure the card content is spaced out to keep the button at the bottom */
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px; /* Increased height to fit the button */
+}
+/* This targets your specific Resume Button */
+/* Update the specific Resume button style */
+.resume-btn-gold {
+    /* Transparent Blue Background (Cyan with 15% opacity) */
+    background-color: rgba(0, 210, 255, 0.15) !important; 
+    
+    /* Solid Cyan Border */
+    border: 1px solid #00d2ff !important;
+    
+    /* Solid Cyan Text */
+    color: #00d2ff !important;
+    
+    font-weight: 600 !important;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    
+    /* Subtle glow that matches the transparency */
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+}
+
+
+/* This forces the Location, Program, and CGPA into one horizontal line */
+.hero-info-bar {
+    display: flex;         /* Makes items sit side-by-side */
+    flex-direction: row;   /* Ensures horizontal alignment */
+    gap: 60px;             /* Space between the three items */
+    margin-top: 40px;      /* Pushes the bar down below the buttons */
+    width: 100%;           /* Takes up the full width */
+    justify-content: flex-start; /* Aligns them to the left */
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column; /* Keeps LABEL above the VALUE */
+    gap: 5px;
+}
+
+/* Fix for the Gold Resume Button to look solid and high-contrast */
+.resume-btn-gold {
+    background: #ffb400 !important;
+    color: #000 !important;
+    border: none !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 20px rgba(255, 180, 0, 0.4);
+}
