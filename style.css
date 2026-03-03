@@ -797,7 +797,7 @@ h1, h2, h3, h4 {
     margin-top: 25px;
 }
 
-..resume-btn-gold {
+.resume-btn-gold {
     /* The exact Blue-to-Purple Gradient from your reference */
     background: linear-gradient(135deg, #2a92a9 0%, #3a7bd5 50%, #63556f 100%) !important;
     
