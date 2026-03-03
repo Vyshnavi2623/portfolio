@@ -797,31 +797,41 @@ h1, h2, h3, h4 {
     margin-top: 25px;
 }
 
-.resume-btn {
+..resume-btn-gold {
+    /* The exact Blue-to-Purple Gradient from your reference */
+    background: linear-gradient(135deg, #2a92a9 0%, #3a7bd5 50%, #63556f 100%) !important;
+    
+    /* Text Styling */
+    color: #ffffff !important;           /* White text looks better on this gradient */
+    font-weight: 700 !important;
+    text-transform: none;                /* Keeps it as "Download Resume" */
+    
+    /* Shape & Border */
+    border: none !important;             /* Remove any existing blue borders */
+    padding: 12px 35px;
+    border-radius: 50px;                 /* Creates the pill shape */
+    
+    /* The Neon Glow Effect */
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    
+    /* Interaction */
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #00d2ff 0%, #928dab 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+    cursor: pointer;
 }
 
-.resume-btn:hover {
+.resume-btn-gold:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
-    filter: brightness(1.1);
+    /* Stronger glow on hover */
+    box-shadow: 0 0 35px rgba(0, 210, 255, 0.9);
+    filter: brightness(1.2);             /* Makes the colors pop more */
 }
 /* This styles the container to keep buttons in one line */
 .hero-btns {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 25px;
+    gap: 20px;          /* Increases space between the three buttons */
+    margin-bottom: 50px; /* Space before the Location/CGPA info bar */
 }
 
 /* This styles the Resume button specifically */
@@ -1093,25 +1103,36 @@ h1, h2, h3, h4 {
 }
 /* This targets your specific Resume Button */
 /* Update the specific Resume button style */
-.resume-btn-gold {
-    /* Transparent Blue Background (Cyan with 15% opacity) */
-    background-color: rgba(0, 210, 255, 0.15) !important; 
+..resume-btn-gold {
+    /* Gradient background from Cyan to Purple/Blue */
+    background: linear-gradient(to right, #00d2ff, #928dab) !important;
     
-    /* Solid Cyan Border */
-    border: 1px solid #00d2ff !important;
+    /* Text styling */
+    color: #000 !important;           /* Black text for high contrast */
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     
-    /* Solid Cyan Text */
-    color: #00d2ff !important;
+    /* Shape and Border */
+    border: none !important;
+    padding: 12px 30px;
+    border-radius: 50px;             /* Perfect pill shape */
     
-    font-weight: 600 !important;
-    padding: 12px 25px;
-    border-radius: 50px;
+    /* Vibrant outer glow */
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    
     transition: all 0.3s ease;
-    
-    /* Subtle glow that matches the transparency */
-    box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
 }
 
+.resume-btn-gold:hover {
+    transform: translateY(-3px);
+    /* Stronger glow on hover */
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.7);
+    filter: brightness(1.1);         /* Makes the gradient pop more */
+}
 
 /* This forces the Location, Program, and CGPA into one horizontal line */
 .hero-info-bar {
